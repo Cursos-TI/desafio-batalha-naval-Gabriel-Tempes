@@ -88,19 +88,32 @@ int main() {
   //exibição do tabuleiro com os navios posicionados.
   printf("### TABULEIRO DE BATALHA NAVAL ###\n");
 
-  for (int i = 0; i < LINHA ; i++){
-    printf("   %d", numero);
-    numero++;
+  printf("\n");
 
-  for (int i = 0; i < LINHA; i++){
+    for (int i = 0; i < LINHA ; i++){
+      printf("   %d", numeroa);
+      numeroa++;
+   }
 
-    printf("%c", letraa);
-    letraa++;
-    
-    for (int j = 0; j < COLUNA; j++){
-       printf("  %d ", tabuleiro[i][j]);
-    }
-    printf("\n");
- }
+   printf("\n");
+
+   //exibição do tabuleiro vazio.
+   for (int i = 0; i < LINHA; i++){
+
+     
+      printf("%c", letraa);
+      letraa++;
+
+      for (int j = 0; j < COLUNA; j++){
+
+         printf("  %d ", tabuleiro[i][j]);
+
+      }
+      printf("\n");
+   }
+
+   printf("\n");
+ 
+ 
     return 0;
 }
