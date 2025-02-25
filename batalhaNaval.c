@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+#define LINHA 10
+#define COLUNA 10
+
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
@@ -36,5 +39,62 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    char letra = 'A';
+    int numero = 1;
+    int numeroa =1;
+    int tabuleiro[LINHA][COLUNA];
+
+    //Código para gerar as letras que farão parte do sistema de coordenadas.
+   
+     printf("### TABULEIRO DE BATALHA NAVAL ###\n");
+     printf("\n");
+
+    for (int i = 0; i < LINHA ; i++){
+      printf("   %c", letra);
+      letra++;
+   }
+
+   printf("\n");
+
+   //exibição do tabuleiro vazio.
+   for (int i = 0; i < LINHA; i++){
+
+     
+      printf(" %d", numero);
+      numero++;
+
+      for (int j = 0; j < COLUNA; j++){
+         
+         tabuleiro[i][j] = 0; //exibe o tabuleiro vazio
+         
+         printf("  %d ", tabuleiro[i][j]);
+      }
+      printf("\n");
+   }
+
+   printf("\n");
+
+   //posicionamento dos navios.
+  for (int i = 3; i < 6; i++){
+    tabuleiro[i][7] = 3; //define o navio da horizontal.
+  }
+  for (int i = 2; i < 5; i++){
+    tabuleiro[9][i] = 3; //define o navio da vertical.
+  }
+
+
+  //exibição do tabuleiro com os navios posicionados.
+  printf("### TABULEIRO DE BATALHA NAVAL ###\n");
+
+  for (int i = 0; i < LINHA; i++){
+
+    printf(" %d ", numeroa);
+    numeroa++;
+    
+    for (int j = 0; j < COLUNA; j++){
+       printf("  %d ", tabuleiro[i][j]);
+    }
+    printf("\n");
+ }
     return 0;
 }
