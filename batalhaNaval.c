@@ -78,12 +78,23 @@ int main() {
    //posicionamento dos navios.
 
   for (int i = 3; i < 6; i++){
-    tabuleiro[i][7] = 3; //define o navio da horizontal.
+    tabuleiro[7][i] = 3; //define um navio da horizontal.
   }
+  for (int i = 0; i < 3; i++){
+   tabuleiro[1][i] = 3; //define um navio da horizontal.
+ }
+ for (int i = 7 ; i < 10; i++){
+   tabuleiro[i][9] = 3; //define um navio da vertical.
+ }
   for (int i = 2; i < 5; i++){
-    tabuleiro[9][i] = 3; //define o navio da vertical.
+    tabuleiro[i][7] = 3; //define um navio da vertical.
   }
-
+  for (int i = 4; i > 1; i--){
+   tabuleiro[i][i] = 3; //define um navio da diagonal.
+  }
+  for (int i = 8; i > 5; i--){
+   tabuleiro[i][i] = 3; //defne um navio da diagonal.
+  }
 
   //exibição do tabuleiro com os navios posicionados.
   printf("### TABULEIRO DE BATALHA NAVAL ###\n");
